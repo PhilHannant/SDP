@@ -1,1 +1,5 @@
+1. What are the reasons for using generics here?
+Allows for the use of multiple types.
 
+2. What are the benefits?
+It means that a programmer can create classes which can be used with different types.
