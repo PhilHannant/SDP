@@ -1,4 +1,4 @@
-package helloworlddecouplewithfactory;
+package helloworlddecoupledwithfactory;
 import java.io.FileInputStream;
 import java.util.Properties;
 
@@ -14,7 +14,7 @@ public class MessageSupportFactory {
     private MessageSupportFactory() {
         props = new Properties();
         try {
-            props.load(new FileInputStream("bean.properties"));
+            props.load(new FileInputStream("/Users/philhannant/IdeaProjects/SDP/WorkSheet2/src/helloworlddecoupledwithfactory/bean.properties"));
 // get the implementation classes
             String rendererClass = props.getProperty("renderer.class");
             String providerClass = props.getProperty("provider.class");

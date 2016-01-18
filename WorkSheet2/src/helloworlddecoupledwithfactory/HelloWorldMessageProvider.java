@@ -1,4 +1,4 @@
-package helloworlddecouplewithfactory;
+package helloworlddecoupledwithfactory;
 
 /**
  * Created by philhannant on 18/01/2016.
