@@ -2,13 +2,13 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-    <bean id="renderer" class="helloworldspringwithdixml.StandardOutMessageRenderer">
+    <bean id="renderer" class="helloworldspringconarg.StandardOutMessageRenderer">
         <property name="messageProvider"
                   ref="provider"/>
     </bean>
-    <bean id="provider" class="helloworldspringwithdixml.HelloWorldMessageProvider">
+    <bean id="provider" class="helloworldspringconarg.ConfigurableMessageProvider">
         <constructor-arg>
-            <value>This is a configurable message</value>
+            <value>Hell World!</value>
         </constructor-arg>
     </bean>
 </beans>
