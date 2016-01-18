@@ -6,7 +6,7 @@
         <property name="messageProvider"
                   ref="provider"/>
     </bean>
-    <bean id="provider" class="helloworldspringwithdixml.ConfigurableMessageProvider">
+    <bean id="provider" class="helloworldspringwithdixml.HelloWorldMessageProvider">
         <constructor-arg>
             <value>This is a configurable message</value>
         </constructor-arg>
