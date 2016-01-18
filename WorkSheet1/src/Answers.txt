@@ -18,3 +18,18 @@ myAccount needs to be cast
    Is this code safe?
 
    The cast converts the object to the same type as bank account, the cast is carried out in the JVM.
+
+6. Explain the compiler output?
+   Are there errors?
+   What is the reason?
+   What does it say about the role of generics?
+
+   Compiles without errors because generics ensure everything is defined correctly.
+
+7. What is the run-time output?
+   Explain why you get such output and how does this relate to generics and their use with
+   reflective instantiation of objects?
+
+   100.0 EQUAL
+   Because of type erassure at run-time classes will be consdered equal at run-time as they will both be considered
+   the superclass at run-time
