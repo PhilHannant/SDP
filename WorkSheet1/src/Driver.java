@@ -10,14 +10,16 @@ public class Driver {
         try {
             BankAccount myAccount = (BankAccount) baCls.newInstance();
             aStorage.setValue(myAccount);
+
+            myAccount.deposit(15);
             System.out.println( aStorage.getValue().showBalance() );
+
             if( aStorage.getClass() == sStorage.getClass() ) {
                 System.out.println( "EQUAL" );
             } else {
                 System.out.println( "NOT EQUAL" );
             }
 // Deposit
-            myAccount.deposit(15);
         }
         catch ( InstantiationException e ) {
 // ...
