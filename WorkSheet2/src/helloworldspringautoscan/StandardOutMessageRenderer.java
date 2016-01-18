@@ -22,4 +22,5 @@ public class StandardOutMessageRenderer implements MessageRenderer {
         }
         System.out.println(messageProvider.getMessage());
     }
+
 }
