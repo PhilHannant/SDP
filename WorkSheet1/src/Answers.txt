@@ -6,3 +6,9 @@ It means that a programmer can create classes which can be used with different t
 
 3. What is the cause of the problem reported by the compiler, if any?
 myAccount needs to be cast
+
+4. How does this affect the compilation process?
+   What is the problem, if any?
+   What does the myAccount variable hold when the code is executed?
+
+   Still fails, compiler asks for a cast. Won't compile, incompatible types.
