@@ -12,3 +12,9 @@ myAccount needs to be cast
    What does the myAccount variable hold when the code is executed?
 
    Still fails, compiler asks for a cast. Won't compile, incompatible types.
+
+5. What does the dynamic cast do here?
+   Is it the compiler that performs the cast operation or the Java runtime environment (JVM)?
+   Is this code safe?
+
+   The cast converts the object to the same type as bank account, the cast is carried out in the JVM.
