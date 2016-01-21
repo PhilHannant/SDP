@@ -43,8 +43,8 @@
 3.  Provide an example of an interface with methods that do not imply responsibility on the part of the implementing
     class to take action on behalf of the caller or to return a value.
 
-    This could happen if a class is initiated as an event listener, this would therefore cause the class itself to
-    receive an instruction to take action on behalf of the caller rather than notify the caller that action is
-    required.
+    This could happen if a class is initiated as an event listener which will therefore be implementing the interface
+    ActionListener, this would therefore cause the class itself to receive an instruction to take action on behalf of
+    the caller rather than notify the caller that action is required.
 
 
