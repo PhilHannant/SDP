@@ -52,4 +52,31 @@
     By creating the stub class WindowAdaptor with empty methods it allows developers to implement the interface
     WindowListener and then only use create implemntations of the methods which are important to their application.
 
+5.  How can you prevent other developers from constructing new instances of your class?
+    Provide appropriate examples to illustrate your answer.
+
+    This can be done by using the singleton design pattern which only allows for one instance of a class to be created.
+    The singleton design pattern uses a private constructor and then there will be a statis reference to the instance of
+    the sole singleton instance and a return reference to that instance.
+    Eg. public class Singleton {
+
+            private Static singleton singleton;
+
+            private Singleton(){}
+
+            public static Singleton getSingleton(){
+                return singleton;
+            }
+        }
+
+        Then from another class the singleton is called as follows:
+
+        public class SingletonEG{
+
+            public static void main(String[] args){
+                Singleton single = Singleton.getSingleton();
+                }
+        }
+
+
 
