@@ -5,19 +5,16 @@
         abstractClass and class2 extends abstractClass is not valid where as class1 implements interface and class2
         implements interface is valid.
 
-    2)  An abstract class can have (static & main) methods and constructors, an interface can only have default methods
-        (Java 8).
+    2)  An abstract class can have constructors and an interface cannot
+
         eg. public abstract class abstractClass{
-            public void aMethod(){
-            }
-            public static void main(String[] args){
-            }
+                public abstractClass(){
+                //constructor
             }
             The above class is valid where as if it was declared an interface it would not be.
 
-    3)  An interface can only extend from another interface where as an abstract class can extend from an abstract class
-        a concrete class or implement an interface. eg. abstractClass extends concreteClass is valid but interface
-        extends abstractClass is not.
+    3)  An abstract class inherits all of the methods belonging to Object where as an interface does not inherit any
+        methods
 
 2.  Are the following true or false?
     Provide examples to illustrate your answers
@@ -49,8 +46,8 @@
 
 4.  What is the value of a stub class like WindowAdapter which is composed of methods that do nothing?
 
-    By creating the stub class WindowAdaptor with empty methods it allows developers to implement the interface
-    WindowListener and then only use create implemntations of the methods which are important to their application.
+    By creating the stub class WindowAdaptor with empty methods it allows developers to create a sub class
+    of the WindowAdaptor and then only create implementations of the methods which are important to their application.
 
 5.  How can you prevent other developers from constructing new instances of your class?
     Provide appropriate examples to illustrate your answer.
@@ -58,9 +55,10 @@
     This can be done by using the singleton design pattern which only allows for one instance of a class to be created.
     The singleton design pattern uses a single constructor with private access and then there will be a static
     reference to the instance of the sole singleton instance and a return reference to that instance.
+
     Eg. public class Singleton {
 
-            private Static singleton singleton;
+            private static Singleton singleton = new Singleton;;
 
             private Singleton(){}
 
@@ -81,8 +79,8 @@
 6.  Why might you decide to lazy-initialise a singleton instance rather than initialise it in its field declaration?
     Provide examples of both approaches to illustrate your answer
 
-    Lazy-intialisation is used when the developer deems some of the data to be expensive for some reason and therefore
-    doesn't want to run a piece of code until it is absolutely necessary.
+    Lazy-initialisation is used when the developer deems some of the data to be expensive for some reason and therefore
+    doesn't want to run a piece of code until it is absolutely necessary. Eager as above, lazy as below:
 
     An example of a lazy-initialised singleton method is below:
 
@@ -93,6 +91,9 @@
         return singleton;
     }
 
+    more to do
 
+7.  Using the java.util.Observable and java.util.Observer classes/interfaces show how one object can be informed of
+    updates to another object.
 
 
