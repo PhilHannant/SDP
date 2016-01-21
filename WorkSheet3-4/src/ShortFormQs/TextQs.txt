@@ -56,8 +56,8 @@
     Provide appropriate examples to illustrate your answer.
 
     This can be done by using the singleton design pattern which only allows for one instance of a class to be created.
-    The singleton design pattern uses a private constructor and then there will be a statis reference to the instance of
-    the sole singleton instance and a return reference to that instance.
+    The singleton design pattern uses a single constructor with private access and then there will be a static
+    reference to the instance of the sole singleton instance and a return reference to that instance.
     Eg. public class Singleton {
 
             private Static singleton singleton;
@@ -77,6 +77,22 @@
                 Singleton single = Singleton.getSingleton();
                 }
         }
+
+6.  Why might you decide to lazy-initialise a singleton instance rather than initialise it in its field declaration?
+    Provide examples of both approaches to illustrate your answer
+
+    Lazy-intialisation is used when the developer deems some of the data to be expensive for some reason and therefore
+    doesn't want to run a piece of code until it is absolutely necessary.
+
+    An example of a lazy-initialised singleton method is below:
+
+    public static Singleton getSingleton() {
+        if (singleton == null)
+            singleton = new Singleton();
+        // ...
+        return singleton;
+    }
+
 
 
 
