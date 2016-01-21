@@ -47,4 +47,9 @@
     ActionListener, this would therefore cause the class itself to receive an instruction to take action on behalf of
     the caller rather than notify the caller that action is required.
 
+4.  What is the value of a stub class like WindowAdapter which is composed of methods that do nothing?
+
+    By creating the stub class WindowAdaptor with empty methods it allows developers to implement the interface
+    WindowListener and then only use create implemntations of the methods which are important to their application.
+
 
