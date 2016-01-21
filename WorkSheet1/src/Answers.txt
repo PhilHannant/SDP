@@ -30,6 +30,6 @@ myAccount needs to be cast
    Explain why you get such output and how does this relate to generics and their use with
    reflective instantiation of objects?
 
-   100.0 EQUAL
+   115.0 EQUAL
    Because of type erassure at run-time classes will be consdered equal at run-time as they will both be considered
    the superclass at run-time
