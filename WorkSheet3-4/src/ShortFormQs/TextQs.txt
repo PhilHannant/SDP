@@ -1,5 +1,6 @@
-1. Write down three differences between abstract classes and interfaces in Java 8. Provide
-examples to illustrate your answer.
+1.  Write down three differences between abstract classes and interfaces in Java 8.
+    Provide examples to illustrate your answer.
+
     1)  An abstract class does not support multiple inheritance where as an interface does, for example class1 extends
         abstractClass and class2 extends abstractClass is not valid where as class1 implements interface and class2
         implements interface is valid.
@@ -17,3 +18,26 @@ examples to illustrate your answer.
     3)  An interface can only extend from another interface where as an abstract class can extend from an abstract class
         a concrete class or implement an interface. eg. abstractClass extends concreteClass is valid but interface
         extends abstractClass is not.
+
+2.  Are the following true or false?
+    Provide examples to illustrate your answers
+
+    (a) Every interface must have at least one method.
+        False - Java marker interfaces have no members but are used as a tag to provide the compiler with a message
+                about any special functionality which needs to added to the class implementing it.
+
+
+    (b) An interface can declare instance fields that an implementing class must also declare.
+        False - Any variable declared in an interface will be public static final and as it is static it cannot be
+                called an instance variable.
+
+    (c) Although you can’t instantiate an interface, an interface definition can declare constructor methods that
+        require an implementing class to provide constructors with given signatures.
+        False - An interface cannot provide constructor methods it can only declare default methods which does not
+                include a constructor as the default constructor, the one without arguments, will be in the class
+                already.
+
+3.  Provide an example of an interface with methods that do not imply responsibility on the part of the implementing
+    class to take action on behalf of the caller or to return a value.
+
+
