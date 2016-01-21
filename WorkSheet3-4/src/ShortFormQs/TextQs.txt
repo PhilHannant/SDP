@@ -23,21 +23,28 @@
     Provide examples to illustrate your answers
 
     (a) Every interface must have at least one method.
+
         False - Java marker interfaces have no members but are used as a tag to provide the compiler with a message
                 about any special functionality which needs to added to the class implementing it.
 
 
     (b) An interface can declare instance fields that an implementing class must also declare.
+
         False - Any variable declared in an interface will be public static final and as it is static it cannot be
                 called an instance variable.
 
     (c) Although you can’t instantiate an interface, an interface definition can declare constructor methods that
         require an implementing class to provide constructors with given signatures.
+
         False - An interface cannot provide constructor methods it can only declare default methods which does not
                 include a constructor as the default constructor, the one without arguments, will be in the class
                 already.
 
 3.  Provide an example of an interface with methods that do not imply responsibility on the part of the implementing
     class to take action on behalf of the caller or to return a value.
+
+    This could happen if a class is initiated as an event listener, this would therefore cause the class itself to
+    receive an instruction to take action on behalf of the caller rather than notify the caller that action is
+    required.
 
 
