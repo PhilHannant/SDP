@@ -1,0 +1,19 @@
+1. Write down three differences between abstract classes and interfaces in Java 8. Provide
+examples to illustrate your answer.
+    1)  An abstract class does not support multiple inheritance where as an interface does, for example class1 extends
+        abstractClass and class2 extends abstractClass is not valid where as class1 implements interface and class2
+        implements interface is valid.
+
+    2)  An abstract class can have (static & main) methods and constructors, an interface can only have default methods
+        (Java 8).
+        eg. public abstract class abstractClass{
+            public void aMethod(){
+            }
+            public static void main(String[] args){
+            }
+            }
+            The above class is valid where as if it was declared an interface it would not be.
+
+    3)  An interface can only extend from another interface where as an abstract class can extend from an abstract class
+        a concrete class or implement an interface. eg. abstractClass extends concreteClass is valid but interface
+        extends abstractClass is not.
