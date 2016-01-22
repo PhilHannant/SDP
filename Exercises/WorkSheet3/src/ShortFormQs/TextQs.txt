@@ -82,7 +82,7 @@
     Lazy-initialisation is used when the developer deems some of the data to be expensive for some reason and therefore
     doesn't want to run a piece of code until it is absolutely necessary. Eager as above, lazy as below:
 
-    An example of a lazy-initialised singleton method is below:
+    Lazy-initialised singleton method is below:
 
     public static Singleton getSingleton() {
         if (singleton == null)
@@ -91,9 +91,60 @@
         return singleton;
     }
 
-    more to do
+    Field declaration class
+
+        public class Singleton {
+
+                private static Singleton singleton = new Singleton;;
+
+                private Singleton(){}
+
+                public static Singleton getSingleton(){
+                    return singleton;
+                }
+            }
 
 7.  Using the java.util.Observable and java.util.Observer classes/interfaces show how one object can be informed of
     updates to another object.
 
+    public class ObservableClass extends Observable {
 
+        private int n = 0;
+
+        public ObservableClass(int n){
+            this.n = n;
+            }
+
+        public setNumber(int n){
+            this.n. = n;
+            setChanged();
+            notifyObservers();
+        }
+
+        public getNumber(){
+            return n;
+        }
+    }
+
+    public class ObserverClass extends Observer{
+
+        private ObservableClass ob = null;
+
+        public ObserverClass(ObservableClass ob){
+            this.ob = ob;
+        }
+
+        public void updateObservableClass(ObservableClass ob){
+            if (ob.equals(ob)){
+                System.out.println(ob.getNumber());
+            }
+        }
+    }
+
+
+8.  “The Observer pattern supports the MVC pattern”. State if this statement is true or false and support your answer
+    by use of an appropriate example.
+
+9.  Provide examples of two commonly used Java methods that return a new object.
+
+10. What are the signs that a Factory Method is at work?
