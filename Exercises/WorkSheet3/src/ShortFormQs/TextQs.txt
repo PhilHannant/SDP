@@ -150,4 +150,7 @@
 
 9.  Provide examples of two commonly used Java methods that return a new object.
 
+    1) The toString method creates and returns a new string object
+    2) The clone method also creates and returns a copy of an object
+
 10. What are the signs that a Factory Method is at work?
