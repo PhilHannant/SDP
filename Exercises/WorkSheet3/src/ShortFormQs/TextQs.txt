@@ -145,6 +145,9 @@
 8.  “The Observer pattern supports the MVC pattern”. State if this statement is true or false and support your answer
     by use of an appropriate example.
 
+    True - the observer pattern is used within the Model View Controller (MVC) architecture, where it is used to decouple the
+    model and the view. In the MVC the view is represened as the observer and the model is the observable.
+
 9.  Provide examples of two commonly used Java methods that return a new object.
 
 10. What are the signs that a Factory Method is at work?
