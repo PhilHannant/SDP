@@ -154,3 +154,17 @@
     2) The clone method also creates and returns a copy of an object
 
 10. What are the signs that a Factory Method is at work?
+
+    The signs that a factory method is at work is an operation that not only creates an object but also isolates the
+    client from knowing which class to instantiate. There will usually be several classes that implement the same
+    operation, return the same abstract type but internally they instantiate different classes which implement that
+    type.
+
+11. Write a code example to define a Writer object that wraps text at 15 characters, centres the text, sets the text to
+    random casing, and directs the output to System.out. Which design pattern are you using?
+
+
+    Writer out = new PrintWriter(System.out);
+
+
+    The design pattern is decorator.
