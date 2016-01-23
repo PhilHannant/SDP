@@ -11,6 +11,12 @@ public class XpayToPayDAdapter implements PayD {
     private Integer cVVNo;
     private Double totalAmount;
 
+    private final Xpay xpay;
+
+    public XpayToPayDAdapter(Xpay xpay) {
+        this.xpay = xpay;
+    }
+
     @Override
     public String getCustCardNo() {
         return custCardNo;
@@ -59,5 +65,9 @@ public class XpayToPayDAdapter implements PayD {
     @Override
     public void setTotalAmount(Double totalAmount) {
         this.totalAmount = totalAmount;
+    }
+
+    private void adpat(){
+
     }
 }
