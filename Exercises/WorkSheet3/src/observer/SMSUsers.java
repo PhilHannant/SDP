@@ -7,7 +7,7 @@ public class SMSUsers implements Observer {
 
     private Subject sub;
     private String msg;
-    private static int userNo = 0;
+    private String desc;
 
 
     public SMSUsers(Subject s, String msg) {
@@ -17,19 +17,20 @@ public class SMSUsers implements Observer {
 
     @Override
     public void update(String desc) {
-
+        this.desc = desc;
+        System.out.println(desc);
     }
 
     @Override
     public void subscribe() {
         sub.subscribeObserver(this);
-        userNo++;
+
     }
 
     @Override
     public void unSubscribe() {
         sub.unSubscribeObserver(this);
-        userNo--;
+
     }
 
 

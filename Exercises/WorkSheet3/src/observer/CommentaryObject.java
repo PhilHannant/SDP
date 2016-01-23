@@ -40,7 +40,6 @@ public class CommentaryObject implements Subject, Commentary {
 
     @Override
     public String subjectDetails() {
-
         return title;
     }
 
