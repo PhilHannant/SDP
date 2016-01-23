@@ -5,9 +5,16 @@ import java.util.List;
 /**
  * Created by philhannant on 23/01/2016.
  */
-public class CommentaryObject implements Subject {
+public class CommentaryObject implements Subject, Commentary {
 
-    public CommentaryObject(List<Observer> subscribers, String title) {}
+    private List<Observer> subscribers;
+    private static String title;
+    private String desc;
+
+    public CommentaryObject(List<Observer> subscribers, String title) {
+        this.subscribers = subscribers;
+        this.title = title;
+    }
 
     @Override
     public void subscribeObserver(Observer observer) {
@@ -27,5 +34,10 @@ public class CommentaryObject implements Subject {
     @Override
     public String subjectDetails() {
         return null;
+    }
+
+    @Override
+    public void setDesc(String desc) {
+
     }
 }
