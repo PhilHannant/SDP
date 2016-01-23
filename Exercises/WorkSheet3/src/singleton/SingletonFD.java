@@ -7,9 +7,9 @@ public class SingletonFD {
 
         private static SingletonFD singleton  = new SingletonFD();
 
-        private Singleton(){}
+        private SingletonFD(){}
 
-        public static SingletonFD getSingleton() {
+        public static SingletonFD getInstance() {
             return singleton;
         }
 }
