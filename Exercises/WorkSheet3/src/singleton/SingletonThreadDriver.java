@@ -18,6 +18,7 @@ public class SingletonThreadDriver implements Runnable {
     public void run() {
         System.out.println("running");
         System.out.println(SingletonDL.getInstance().getClass());
+        System.out.println(SingletonDL.getDoub());
     }
 
 }
