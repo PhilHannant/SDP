@@ -20,7 +20,7 @@ public class CommentaryObject implements Subject, Commentary {
     @Override
     public void subscribeObserver(Observer observer) {
         subscribers.add(observer);
-        System.out.println(observer.toString() + "added");
+
 
     }
 
@@ -47,6 +47,7 @@ public class CommentaryObject implements Subject, Commentary {
     @Override
     public void setDesc(String desc) {
         this.desc = desc;
+        notifyObservers();
     }
 
 
