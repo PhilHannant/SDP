@@ -18,26 +18,29 @@ public class CommentaryObject implements Subject, Commentary {
 
     @Override
     public void subscribeObserver(Observer observer) {
+        subscribers.add(observer);
 
     }
 
     @Override
     public void unSubscribeObserver(Observer observer) {
-
+        subscribers.remove(observer);
     }
 
     @Override
     public void notifyObservers() {
 
+
     }
 
     @Override
     public String subjectDetails() {
+
         return null;
     }
 
     @Override
     public void setDesc(String desc) {
-
+        this.desc = desc;
     }
 }
