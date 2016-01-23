@@ -15,6 +15,7 @@ public class XpayToPayDAdapter implements PayD {
 
     public XpayToPayDAdapter(Xpay xpay) {
         this.xpay = xpay;
+        adpat();
     }
 
     @Override
