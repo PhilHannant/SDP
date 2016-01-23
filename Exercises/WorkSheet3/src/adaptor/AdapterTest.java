@@ -19,10 +19,10 @@ public class AdapterTest {
 
         XpayToPayDAdapter xpa = new XpayToPayDAdapter(xp);
         System.out.println(xpa.getCardOwnerName());
-        System.out.println(xpa.getCustCardNo();
-        System.out.println(xpa.getCardExpMonthDate();
-        System.out.println(xpa.getCVVNo();
-        System.out.println(xpa.getTotalAmount();
+        System.out.println(xpa.getCustCardNo());
+        System.out.println(xpa.getCardExpMonthDate());
+        System.out.println(xpa.getCVVNo());
+        System.out.println(xpa.getTotalAmount());
     }
 
 }

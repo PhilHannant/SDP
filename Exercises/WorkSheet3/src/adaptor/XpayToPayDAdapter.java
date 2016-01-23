@@ -40,7 +40,7 @@ public class XpayToPayDAdapter implements PayD {
 
     @Override
     public String getCardExpMonthDate() {
-        return getCardExpMonthDate();
+        return cardExpMonthDate;
     }
 
     @Override
