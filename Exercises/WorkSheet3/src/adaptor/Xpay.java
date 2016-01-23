@@ -4,23 +4,28 @@ package adaptor;
  * Created by philhannant on 23/01/2016.
  */
 public interface Xpay {
-    String getCustCardNo();
 
-    void setCustCardNo(String custCardNo);
+    String getCreditCardNo();
 
-    String getCardOwnerName();
+    void setCreditCardNo(String creditCardNo);
 
-    void setCardOwnerName(String cardOwnerName);
+    String getCustomerName();
 
-    String getCardExpMonthDate();
+    void setCustomerName(String customerName);
 
-    void setCardExpMonthDate(String cardExpMonthDate);
+    String getCardExpMonth();
 
-    Integer getCVVNo();
+    void setCardExpMonth(String cardExpMonth);
 
-    void setCVVNo(Integer cVVNo);
+    String getCardExpYear();
 
-    Double getTotalAmount();
+    void setCardExpYear(String cardExpYear);
 
-    void setTotalAmount(Double totalAmount);
+    Short getCardCVVNo();
+
+    void setCardCVVNo(Short cardCVVNo);
+
+    Double getAmount();
+
+    void setAmount(Double amount);
 }
