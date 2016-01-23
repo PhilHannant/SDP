@@ -3,7 +3,7 @@ package decorator;
 /**
  * Created by philhannant on 23/01/2016.
  */
-public class Spinach implements Pizza {
+public class Spinach extends PizzaDecorator {
 
     public Spinach(Pizza pizza) {
     }
