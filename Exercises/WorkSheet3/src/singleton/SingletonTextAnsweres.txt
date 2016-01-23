@@ -1,0 +1,13 @@
+(a) How could we use the synchronized keyword to the getInstance() method to operate correctly.
+
+    Add synchronized to the method signature
+
+(b) The synchronised version comes with a price as it will decrease the performance of the code — why?
+
+    Every thread will also have to be synchronised and therefore will have to wait to be notified before being able to
+    access getInstance.
+
+(c) If the call to the getInstance() method isn’t causing a substantial overhead for your application, then you can
+    forget about it.
+
+    Not sure what the question is?
