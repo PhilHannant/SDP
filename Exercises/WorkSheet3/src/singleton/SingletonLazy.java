@@ -8,7 +8,7 @@ public class SingletonLazy {
     private static SingletonLazy singleton;
 
 
-    public static SingletonLazy getSingleton() {
+    public static SingletonLazy getInstance() {
         if (singleton == null) {
             singleton = new SingletonLazy();
         }
