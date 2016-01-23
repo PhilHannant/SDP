@@ -11,6 +11,7 @@ public class CommentaryObject implements Subject, Commentary {
     private static String title;
     private String desc;
 
+
     public CommentaryObject(List<Observer> subscribers, String title) {
         this.subscribers = subscribers;
         this.title = title;
@@ -19,12 +20,14 @@ public class CommentaryObject implements Subject, Commentary {
     @Override
     public void subscribeObserver(Observer observer) {
         subscribers.add(observer);
+        System.out.println(observer.toString() + "added");
 
     }
 
     @Override
     public void unSubscribeObserver(Observer observer) {
         subscribers.remove(observer);
+
     }
 
     @Override
@@ -38,11 +41,13 @@ public class CommentaryObject implements Subject, Commentary {
     @Override
     public String subjectDetails() {
 
-        return null;
+        return title;
     }
 
     @Override
     public void setDesc(String desc) {
         this.desc = desc;
     }
+
+
 }
