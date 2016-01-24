@@ -11,7 +11,7 @@ public class Meat extends PizzaDecorator {
 
     @Override
     public String getDesc() {
-        return pizza.getDesc() + " Meat";
+        return pizza.getDesc() + ", Meat (14.25)";
     }
 
     @Override

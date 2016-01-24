@@ -11,7 +11,7 @@ public class GreenOlives extends PizzaDecorator{
 
     @Override
     public String getDesc() {
-        return pizza.getDesc() +  " Green Olives'";
+        return pizza.getDesc() +  ", Green Olives (5.47)";
     }
 
     @Override

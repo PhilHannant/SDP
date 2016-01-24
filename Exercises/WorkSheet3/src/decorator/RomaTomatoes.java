@@ -11,7 +11,7 @@ public class RomaTomatoes extends PizzaDecorator{
 
     @Override
     public String getDesc() {
-        return pizza.getDesc() + " Roma Tomatoes";
+        return pizza.getDesc() + ", Roma Tomatoes (5.20)";
     }
 
     @Override

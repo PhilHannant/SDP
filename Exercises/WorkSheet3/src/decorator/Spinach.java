@@ -11,7 +11,7 @@ public class Spinach extends PizzaDecorator {
 
     @Override
     public String getDesc() {
-        return pizza.getDesc() + " Spinach";
+        return pizza.getDesc() + ", Spinach (7.92)";
     }
 
     @Override
