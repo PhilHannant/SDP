@@ -6,7 +6,7 @@ package decorator;
 public class RomaTomatoes extends PizzaDecorator{
 
     public RomaTomatoes(Pizza pizza) {
-        this.pizza = pizza;
+        super(pizza);;
     }
 
     @Override

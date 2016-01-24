@@ -5,8 +5,15 @@ package decorator;
  */
 public abstract class PizzaDecorator implements Pizza {
 
-    public Pizza pizza;
+    protected Pizza pizza;
 
-    public abstract String getDesc();
+    public PizzaDecorator(Pizza pizza){
+        this.pizza = pizza;
+    }
+
+    public String getDesc(){
+        return pizza.getDesc();
+
+    }
 
 }

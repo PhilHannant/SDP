@@ -6,15 +6,16 @@ package decorator;
 public class GreenOlives extends PizzaDecorator{
 
     public GreenOlives(Pizza pizza) {
+        super(pizza);;
     }
 
     @Override
     public String getDesc() {
-        return "Green Olives'";
+        return pizza.getDesc() +  " Green Olives'";
     }
 
     @Override
     public double getPrice() {
-        return 5.47;
+        return pizza.getPrice() + 5.47;
     }
 }
