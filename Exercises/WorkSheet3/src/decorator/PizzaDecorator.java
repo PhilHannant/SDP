@@ -5,4 +5,8 @@ package decorator;
  */
 public abstract class PizzaDecorator implements Pizza {
 
+    public Pizza pizza;
+
+    public abstract String getDesc();
+
 }
