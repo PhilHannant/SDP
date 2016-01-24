@@ -1,7 +1,7 @@
 package singleton;
 
 import singleton.SingletonDL;
-/**
+/**g
  * Created by philhannant on 23/01/2016.
  */
 public class SingletonThreadDriver implements Runnable {
@@ -18,7 +18,7 @@ public class SingletonThreadDriver implements Runnable {
     public void run() {
         System.out.println("running");
         System.out.println(SingletonDL.getInstance().getClass());
-        System.out.println(SingletonDL.getDoub());
+        System.out.println(SingletonDL.getInstance().getNumber());
     }
 
 }
