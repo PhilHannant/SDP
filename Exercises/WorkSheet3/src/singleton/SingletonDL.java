@@ -6,6 +6,12 @@ package singleton;
 public class SingletonDL {
 
     private static volatile SingletonDL singleton;
+    private static double number;
+
+    private SingletonDL(){
+        number = Math.random() * 10;
+
+    }
 
     public static synchronized SingletonDL getInstance() {
 
@@ -18,6 +24,10 @@ public class SingletonDL {
             }
         }
         return singleton;
+    }
+
+    public double getNumber(){
+        return number;
     }
 }
 
