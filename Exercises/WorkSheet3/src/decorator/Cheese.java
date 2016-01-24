@@ -10,11 +10,11 @@ public class Cheese extends PizzaDecorator {
 
     @Override
     public String getDesc() {
-        return null;
+        return "Cheese";
     }
 
     @Override
     public double getPrice() {
-        return 0;
+        return 20.72;
     }
 }
