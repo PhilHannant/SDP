@@ -10,11 +10,11 @@ public class GreenOlives extends PizzaDecorator{
 
     @Override
     public String getDesc() {
-        return null;
+        return "Green Olives'";
     }
 
     @Override
     public double getPrice() {
-        return 0;
+        return 5.47;
     }
 }
