@@ -10,18 +10,20 @@ object Expressions {
       if (sky == "sunny" && temp > 80) true
       else false
     }
+    println(niceDay)
 
     var notSoNice = {
       if((sky == "sunny" || sky == "partly cloudy") && temp > 80)
         true
       else false
     }
+    println(notSoNice)
 
     var mixedBag = {
       if ((sky == "sunny" || sky == "partly cloudy") && (temp > 80 || temp < 20))
         true
       else false
     }
-
+    println(mixedBag)
   }
 }
