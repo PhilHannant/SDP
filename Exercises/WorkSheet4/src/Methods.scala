@@ -12,6 +12,12 @@ object Methods {
     else false
   }
 
+  def manyTimesString(str: String, x: Int) = {
+      str * x
+
+    }
+
+
   def main(args: Array[String]) {
     val a = getSquare(3)
     assert(a == 9)
@@ -24,5 +30,14 @@ object Methods {
     assert(!t1)
     val t2 = isArg1GreaterThanArg2(2.1, 1.2)
     assert(t2)
+
+    val m1 = manyTimesString("abc", 3)
+    assert("abcabcabc" == m1, "Failure!")
+    println(m1)
+    val m2 = manyTimesString("123", 2)
+    assert("123123" == m2, "Failure")
+    println(m2)
+
+
   }
 }
