@@ -8,7 +8,17 @@ object ClassesObjects {
     println(rn1.step)
 
     val rn2 = 1 to 10 by 2
-    print(rn2.step)
+    println(rn2.step)
+
+    //step value automatically will be 1 unless set to another number, rn2 will go up in 2s
+
+    var s1 = "Sally"
+    var s2 = "Sally"
+
+    if (s1.equals(s2))
+      print("s1 and s2 are equal")
+    else
+      print("s1 and s2 are not equal")
   }
 
 
