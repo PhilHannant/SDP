@@ -39,6 +39,17 @@ object ClassesObjects {
 
     //yes lot's of ugly strings
 
+    println()
+    val lion2 = new Lion()
+    println(lion2)
+    val girafe2 = new Girafe()
+    val girafe3 = new Girafe()
+    println(girafe2)
+    println(girafe3)
+
+    //they have a different hexadecimal
+
+
 
 
   }
