@@ -16,9 +16,31 @@ object ClassesObjects {
     var s2 = "Sally"
 
     if (s1.equals(s2))
-      print("s1 and s2 are equal")
+      println("s1 and s2 are equal")
     else
-      print("s1 and s2 are not equal")
+      println("s1 and s2 are not equal")
+
+    class Hippo{}
+    class Lion{}
+    class Tiger{}
+    class Monkey{}
+    class Girafe{}
+
+    val hippo = new Hippo()
+    println(hippo)
+    val lion = new Lion()
+    println(lion)
+    val tiger = new Tiger()
+    println(tiger)
+    val monkey = new Monkey()
+    println(monkey)
+    val girafe = new Girafe()
+    println(girafe)
+
+    //yes lot's of ugly strings
+
+
+
   }
 
 
