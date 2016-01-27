@@ -5,7 +5,7 @@ object Expressions {
 
   def main(args: Array[String]) {
     val sky = "sunny"
-    val temp = 90
+    val temp = 10
     var niceDay = {
       if (sky == "sunny" && temp > 80) true
       else false
@@ -25,5 +25,9 @@ object Expressions {
       else false
     }
     println(mixedBag)
+
+    var F2C = {(temp - 32) * 5/9}
+
+    print(F2C)
   }
 }
