@@ -17,6 +17,11 @@ object Expressions {
       else false
     }
 
+    var mixedBag = {
+      if ((sky == "sunny" || sky == "partly cloudy") && (temp > 80 || temp < 20))
+        true
+      else false
+    }
 
   }
 }
