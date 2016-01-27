@@ -2,7 +2,7 @@
     int1: Int = 17
 
     scala> print(int1)
-    15.56
+    17
 
 2.  scala> int1 = 20
     <console>:11: error: reassignment to val
