@@ -7,8 +7,9 @@ object Methods {
     a*a
   }
 
-  def isArg1GreaterThanArg2(a: Double, b: Double){
-
+  def isArg1GreaterThanArg2(a: Double, b: Double) = {
+    if (a > b) true
+    else false
   }
 
   def main(args: Array[String]) {
@@ -20,8 +21,8 @@ object Methods {
     assert(c == 25)
 
     val t1 = isArg1GreaterThanArg2(4.1, 4.12)
-    assert(false)
+    assert(!t1)
     val t2 = isArg1GreaterThanArg2(2.1, 1.2)
-    assert(true)
+    assert(t2)
   }
 }
