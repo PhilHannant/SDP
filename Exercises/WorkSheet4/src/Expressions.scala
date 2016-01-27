@@ -30,7 +30,7 @@ object Expressions {
 
     println(F2C)
 
-    var C2F = {(temp * 5/9) + 32}
+    var C2F = {(temp * 9/5) + 32}
 
     println(C2F)
 
