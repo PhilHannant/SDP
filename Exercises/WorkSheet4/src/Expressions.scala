@@ -10,5 +10,13 @@ object Expressions {
       if (sky == "sunny" && temp > 80) true
       else false
     }
+
+    var notSoNice = {
+      if((sky == "sunny" || sky == "partly cloudy") && temp > 80)
+        true
+      else false
+    }
+
+
   }
 }
