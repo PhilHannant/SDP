@@ -1,0 +1,29 @@
+1.  scala> val int1 = 17
+    int1: Int = 17
+
+    scala> print(int1)
+    15.56
+
+2.  scala> int1 = 20
+    <console>:11: error: reassignment to val
+       int1 = 20
+            ^
+    val cannot be reassigned
+
+3.  scala> val abc = "ABC1234"
+    abc: String = ABC1234
+
+    scala> print(abc)
+    ABC1234
+
+4.  scala> abc = DEF1234
+    <console>:11: error: reassignment to val
+           abc = DEF1234
+
+    Again, didn't allow it as it's a val and cannot be changed
+
+5.  scala> val newInt = 15.56
+    newInt: Double = 15.56
+
+    scala> print(newInt)
+    15.56
