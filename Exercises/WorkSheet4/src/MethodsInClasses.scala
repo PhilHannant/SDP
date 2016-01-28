@@ -5,27 +5,7 @@ object MethodsInClasses {
 
   def main(args: Array[String]) {
 
-    class Sailboat{
 
-      def raise() = {
-        "Sails raised"
-      }
-
-      def lower() = {
-        "Sails lowered"
-      }
-    }
-
-
-    class Motorboat {
-      def on() = {
-        "Motor on"
-      }
-
-      def off() = {
-        "Motor off"
-      }
-    }
 
     val sailboat = new Sailboat
     val r1 = sailboat.raise()
@@ -38,8 +18,39 @@ object MethodsInClasses {
     val s2 = motorboat.off()
     assert(s2 == "Motor off", "Expected Motor off, Got " + s2)
 
+    val flare = new Flare
+    val f1 = flare.light
+    assert(f1 == "Flare used!", "Expected Flare used!, Got " + f1)
 
 
   }
 
+  class Sailboat{
+
+    def raise() = {
+      "Sails raised"
+    }
+
+    def lower() = {
+      "Sails lowered"
+    }
+  }
+
+
+  class Motorboat {
+    def on() = {
+      "Motor on"
+    }
+
+    def off() = {
+      "Motor off"
+    }
+  }
+
+  class Flare{
+    def light() ={
+      "Flare used!"
+    }
+
+  }
 }
