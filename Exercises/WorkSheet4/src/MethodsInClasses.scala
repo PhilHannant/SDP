@@ -12,7 +12,7 @@ object MethodsInClasses {
       }
 
       def lower() = {
-        "Sails Lowered"
+        "Sails lowered"
       }
     }
 
