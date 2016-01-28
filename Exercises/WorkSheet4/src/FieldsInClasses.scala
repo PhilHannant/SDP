@@ -21,6 +21,14 @@ object FieldsInClasses {
     cup1.add(10) is 10
     cup1.add(-9) is 1
     cup1.add(-2) is 0
+
+    cup1.percentFull = 56
+    cup1.percentFull is 56 //seemed to work
+
+    val cup2 = new Cup2
+    cup2.set(56)
+    cup2.get() is 56
+
   }
 
   class Cup {
@@ -56,11 +64,17 @@ object FieldsInClasses {
       } else if (percentFull < 0){
         percentFull = 0
       }
-
-
       percentFull // Return this value
-
     }
+
+    def set(x: Int) = {
+      percentFull = x
+    }
+
+    def get() = {
+      percentFull
+    }
+
   }
 
 
