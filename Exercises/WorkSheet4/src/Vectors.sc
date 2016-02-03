@@ -9,3 +9,14 @@ val newVec = Vector("The", "dog", "visited", "the", "fire", "station" )
 var sentence = ""
 newVec.foreach((a)=> sentence += a + " ")
 sentence.toString () is "The dog visited the fire station "
+
+val vecInt = Vector(1,3,5,33,56,8,42,1)
+val vecDou = Vector(3.4,56.7,20.0,100.9)
+
+vecInt.max
+vecInt.min
+vecInt.sum
+
+vecDou.max
+vecDou.min
+vecDou.sum
