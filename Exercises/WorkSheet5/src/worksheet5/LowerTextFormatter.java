@@ -3,12 +3,11 @@ package worksheet5;
 /**
  * Created by philhannant on 04/02/2016.
  */
-public class LowerTextFormatter implements TextFormatter {
+public class LowerTextFormatter implements TextEditor {
 
 
     @Override
-    public void format(String text) {
-        System.out.println(text.toLowerCase());
+    public void publishText(String text) {
 
     }
 }
