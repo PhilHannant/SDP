@@ -1,0 +1,11 @@
+1.  (a) Briefly describe the Strategy Design Pattern?
+
+    It is a design pattern which allows for an algorithm's beahvoiur to be selected at runtime. The pattern does this by
+    defining a family of algorithms, encapsulating each algorightm and then making these algorithms interchangeable
+    within the defined family.
+
+
+    (b) When is it appropriate to use the Strategy Design Pattern?
+
+    When you want to define classes that have behavoiur that will have one behavoiur which is similar to certain other
+    behaviours in a list, or when you need to use one or several bahavours dynamically.
