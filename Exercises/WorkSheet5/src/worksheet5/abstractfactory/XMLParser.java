@@ -5,5 +5,5 @@ package worksheet5.abstractfactory;
  */
 public interface XMLParser {
 
-    public String parse();
+    String parse();
 }
