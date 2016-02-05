@@ -9,9 +9,11 @@ public class TextEditor {
 
 
    public TextEditor(TextFormatter textFormatter){
-       this.textFormatter = textFormatter
+       this.textFormatter = textFormatter;
    }
 
 
-   public void publishText(String text);
+   public void publishText(String text){
+       textFormatter.format(text);
+   }
 }
