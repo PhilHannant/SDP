@@ -6,6 +6,6 @@ package worksheet5.abstractfactory;
 public class NYCFeedbackXML implements XMLParser {
     @Override
     public String parse() {
-        return null;
+        return "NYC XML Feedback Message...";
     }
 }
