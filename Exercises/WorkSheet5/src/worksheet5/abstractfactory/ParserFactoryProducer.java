@@ -7,6 +7,8 @@ package worksheet5.abstractfactory;
 public class ParserFactoryProducer {
 
     public static XMLParser getFactory(String factoryType) {
+        if(factoryType.equals())
+
         return null;
     }
 }
