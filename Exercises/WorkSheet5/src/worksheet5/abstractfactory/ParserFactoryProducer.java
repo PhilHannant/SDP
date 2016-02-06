@@ -6,9 +6,13 @@ package worksheet5.abstractfactory;
  */
 public class ParserFactoryProducer {
 
-    public static XMLParser getFactory(String factoryType) {
-        if(factoryType.equals())
-
-        return null;
+    public static AbstractParserFactory getFactory(String factoryType) {
+        if(factoryType.equalsIgnoreCase("NYCFactory")){
+            return new NYCFactory();
+        } else if (factoryType.equalsIgnoreCase("LondonFactory")){
+            return new LondonFactory();
+        } else {
+            System.out.println("Factory type not recognised!!");
+        }
     }
 }
