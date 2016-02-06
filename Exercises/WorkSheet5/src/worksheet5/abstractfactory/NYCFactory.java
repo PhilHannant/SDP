@@ -6,6 +6,17 @@ package worksheet5.abstractfactory;
 public class NYCFactory implements AbstractParserFactory {
     @Override
     public XMLParser getParserInstance(String parserType) {
-        return null;
+        if(parserType.equalsIgnoreCase("NYCError")){
+            return new NYCErrorXMLParser();
+        } else if (parserType.equalsIgnoreCase("NYCFeedback")){
+            return new NYCFeedbackXMLParser();
+        } else if (parserType.equalsIgnoreCase("NYCOrder")){
+            return new NYCOrderXMLParser();
+        } else if (parserType.equalsIgnoreCase("NYCResponse")){
+            return new NYCResponseXMLParser();
+        } else {
+            System.out.println("Parser Type not recognised");
+            return null;
+        }
     }
 }
