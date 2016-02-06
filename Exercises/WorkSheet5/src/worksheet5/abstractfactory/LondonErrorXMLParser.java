@@ -6,6 +6,7 @@ package worksheet5.abstractfactory;
 public class LondonErrorXMLParser implements XMLParser {
     @Override
     public String parse() {
-        return null;
+        System.out.println("London Parsing error XML...");
+        return "London Error XML Message";
     }
 }
