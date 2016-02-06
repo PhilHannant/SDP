@@ -13,6 +13,7 @@ public class ParserFactoryProducer {
             return new LondonFactory();
         } else {
             System.out.println("Factory type not recognised!!");
+            return null;
         }
     }
 }
