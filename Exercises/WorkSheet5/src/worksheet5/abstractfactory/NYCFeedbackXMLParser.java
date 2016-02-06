@@ -6,6 +6,7 @@ package worksheet5.abstractfactory;
 public class NYCFeedbackXMLParser implements XMLParser {
     @Override
     public String parse() {
-        return "NYC XML Feedback Message...";
+        System.out.println("NYC Parsing feedback XML...");
+        return "NYC Feedback XML Message";
     }
 }

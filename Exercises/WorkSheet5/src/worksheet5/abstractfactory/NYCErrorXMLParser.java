@@ -6,6 +6,7 @@ package worksheet5.abstractfactory;
 public class NYCErrorXMLParser implements XMLParser {
     @Override
     public String parse() {
-        return "NYC XML Error Message...";
-    }
+            System.out.println("NYC Parsing error XML...");
+            return "NYC Error XML Message";
+            }
 }
