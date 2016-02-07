@@ -13,3 +13,11 @@
 3.  When is it appropriate to use the Abstract Factory design pattern?
 
     If you have a lot objects that can be added, or changed dynamically during runtime.
+
+5.  “In general, the details of object construction, such as instantiating and initialising the components that
+    comprise the object, are kept within the object, often as part of its constructor.”
+
+    Comment on this statement with reference to modularity and construction bloat
+
+    This can result in code becoming lenghty which increases construction bloat and results in the a less modular
+    solution.
