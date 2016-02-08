@@ -4,9 +4,10 @@ package worksheet5.builder;
  * Created by philhannant on 08/02/2016.
  */
 public class SportsCarBuilder extends CarBuilder {
-    @Override
-    public void setCar(String carType) {
 
+    @Override
+    public Car getCar() {
+        return null;
     }
 
     @Override

@@ -5,13 +5,8 @@ package worksheet5.builder;
  */
 public abstract class CarBuilder {
 
-    protected Car car;
 
-    public Car getCar(){
-        return car;
-    }
-
-    public abstract void setCar(String carType);
+    public abstract Car getCar();
 
     public abstract void buildBodyStyle();
 
