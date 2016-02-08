@@ -10,4 +10,20 @@ public abstract class CarBuilder {
     public Car getCar(){
         return car;
     }
+
+    public abstract void buildBodyStyle();
+
+    public abstract void buildPower();
+
+    public abstract void buildEngine();
+
+    public abstract void buildBreaks();
+
+    public abstract void buildSeats();
+
+    public abstract void buildWindows();
+
+    public abstract void buildFuelType();
+
+
 }
