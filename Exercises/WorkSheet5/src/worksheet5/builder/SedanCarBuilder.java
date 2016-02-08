@@ -7,6 +7,10 @@ public class SedanCarBuilder extends CarBuilder {
 
 
     @Override
+    public void setCar(String carType) {
+        car = new Car(carType);
+    }
+
     public void buildBodyStyle() {
         car.setBodyStyle("Body: External dimensions: overall length (inches): 202.9,\n" +
                 "overall width (inches): 76.2, overall height (inches): 60.7,\n" +

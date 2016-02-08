@@ -11,6 +11,8 @@ public abstract class CarBuilder {
         return car;
     }
 
+    public abstract void setCar(String carType);
+
     public abstract void buildBodyStyle();
 
     public abstract void buildPower();

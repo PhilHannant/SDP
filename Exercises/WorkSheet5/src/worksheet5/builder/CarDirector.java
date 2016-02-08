@@ -5,13 +5,20 @@ package worksheet5.builder;
  */
 public class CarDirector {
 
-    private CarDirector carDirector;
+    private CarBuilder carBuilder;
 
-    public CarDirector(CarDirector carDirector){
-        this.carDirector = carDirector;
+    public CarDirector(CarBuilder carBuilder){
+        this.carBuilder = carBuilder;
     }
 
-    public Car build(){
-        return null;
+    public void build(){
+        carBuilder.buildBodyStyle();
+        carBuilder.buildBreaks();
+        carBuilder.buildEngine();
+        carBuilder.buildPower();
+        carBuilder.buildFuelType();
+        carBuilder.buildSeats();
+        carBuilder.buildWindows();
+
     }
 }
