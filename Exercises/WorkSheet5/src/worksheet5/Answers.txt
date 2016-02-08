@@ -21,3 +21,14 @@
 
     This can result in code becoming lenghty which increases construction bloat and results in the a less modular
     solution.
+
+7.  (a) What is the Facade Pattern?
+
+    When you create a simple interface that performs many other actions behind the scenes.
+
+    (b) When, and why, would you use the Facade Pattern?
+
+    The facade pattern is used when you want to shield the user from the details of the system in order to provide an
+    easy to use simplified view of the system. A classic example is a bank account set up where the user will
+    want to withdraw, deposit or check the account and this will be performed through one simple interface linking to
+    a number of other classes.
