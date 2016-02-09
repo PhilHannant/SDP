@@ -48,3 +48,6 @@
     individually.
 
     (c) What are the four participants of the Composite Design Pattern?
+
+    Component, leaf, composite and client.
+
