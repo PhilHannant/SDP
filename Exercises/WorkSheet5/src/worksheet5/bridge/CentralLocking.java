@@ -18,6 +18,6 @@ public class CentralLocking implements Product {
 
     @Override
     public void produce() {
-        System.out.println("Producing Gear Locking System");
+        System.out.println("Producing Central Locking System");
     }
 }
