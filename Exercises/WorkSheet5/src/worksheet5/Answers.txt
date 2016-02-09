@@ -32,3 +32,8 @@
     easy to use simplified view of the system. A classic example is a bank account set up where the user will
     want to withdraw, deposit or check the account and this will be performed through one simple interface linking to
     a number of other classes.
+
+9.  When should one make use of the Bridge Design Pattern?
+
+    When it is necessary to decouple the abstraction from it's actual implementation in order to allow both parts to
+    vary independently.
