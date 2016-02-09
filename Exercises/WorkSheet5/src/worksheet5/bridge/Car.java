@@ -17,6 +17,7 @@ public abstract class Car {
     public abstract void produceProduct();
 
     public void printDetails(){
+        System.out.println("Car: " + car + ", Product: " + product.productName());
 
     }
 
