@@ -37,3 +37,14 @@
 
     When it is necessary to decouple the abstraction from it's actual implementation in order to allow both parts to
     vary independently.
+
+11. (a) What is the Composite Pattern?
+
+    It allows for objects to be treated individually and compositions of objects uniformly.
+
+    (b) Under what conditions would you use a Composite Design Pattern?
+
+    When there is a need to structure data, or represent the inner working of every part of the a whole object
+    individually.
+
+    (c) What are the four participants of the Composite Design Pattern?
