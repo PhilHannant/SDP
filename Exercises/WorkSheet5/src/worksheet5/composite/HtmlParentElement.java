@@ -3,5 +3,24 @@ package worksheet5.composite;
 /**
  * Created by philhannant on 09/02/2016.
  */
-public class HtmlParentElement {
+public class HtmlParentElement extends HtmlTag {
+    @Override
+    public String getTagName() {
+        return null;
+    }
+
+    @Override
+    public void setStartTag(String tag) {
+
+    }
+
+    @Override
+    public void setEndTag(String tag) {
+
+    }
+
+    @Override
+    public void generateHtml() {
+
+    }
 }
