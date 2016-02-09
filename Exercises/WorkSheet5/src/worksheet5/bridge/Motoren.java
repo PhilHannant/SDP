@@ -16,13 +16,13 @@ public class Motoren extends Car {
 
     @Override
     public void assemble() {
-        System.out.println("Modifying product " + product + " according to " + car);
+        System.out.println("Modifying product " + product.productName() + " according to " + car);
 
     }
 
     @Override
     public void produceProduct() {
-        System.out.println("Producing " + product);
+        System.out.println("Producing " + product.productName());
         product.produce();
     }
 }
