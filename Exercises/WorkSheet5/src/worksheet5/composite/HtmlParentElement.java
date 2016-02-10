@@ -39,4 +39,20 @@ public class HtmlParentElement extends HtmlTag {
     public void generateHtml() {
 
     }
+
+
+    @Override
+    public void addChildTag(HtmlTag htmlTag) {
+        childTags.add(htmlTag);
+    }
+
+    @Override
+    public void removeChildTag(HtmlTag htmlTag) {
+        childTags.remove(htmlTag);
+    }
+
+    @Override
+    public List<HtmlTag> getChildren() {
+        return childTags;
+    }
 }
