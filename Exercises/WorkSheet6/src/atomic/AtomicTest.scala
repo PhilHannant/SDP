@@ -1,4 +1,4 @@
-package atomicScala
+package atomic
 
 // AtomicTest.scala
 /* A tiny little testing framework, to

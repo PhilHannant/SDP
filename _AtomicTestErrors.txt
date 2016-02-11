@@ -4,3 +4,11 @@
 -20
 0[Error] expected:
 -20
+Unknown[Error] expected:
+Partly Sunny
+Cloudy[Error] expected:
+Mostly Sunny
+Unknown[Error] expected:
+Cloudy
+Mostly Cloudy[Error] expected:
+Mostly Sunny
