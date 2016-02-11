@@ -14,11 +14,11 @@ object TestArgs extends App {
     family2.familySize() is 3
 }
 
-case class Family(args: String*){
+case class Family(Mum: String, Dad: String, kids: String*){
 
 
   def familySize() = {
-      args.size
+      2 + kids.size
   }
 
 }
