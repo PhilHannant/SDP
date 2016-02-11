@@ -24,4 +24,12 @@ object MyForecastTest extends App {
 
   }
 
+  val sunnyData = Vector(100, 80, 50, 20, 15, 0)
+  var (x: Int) = 0
+
+  for(x <-  0 to sunnyData.size - 1){
+    println(forecast(sunnyData(x)))
+  }
+
+
 }
