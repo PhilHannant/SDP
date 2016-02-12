@@ -14,6 +14,10 @@ object MyForecastTest extends App {
   forecast(15) is "Unknown"
 
 
+
+
+
+
   def forecast(temp: Int): String = temp match {
       case 100 => "Sunny"
       case 80 => "Mostly Sunny"
@@ -30,6 +34,8 @@ object MyForecastTest extends App {
   for(x <-  0 to sunnyData.size - 1){
     println(forecast(sunnyData(x)))
   }
+
+
 
 
 }
