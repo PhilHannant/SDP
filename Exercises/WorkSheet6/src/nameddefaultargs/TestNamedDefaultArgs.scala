@@ -38,5 +38,9 @@ class Planet(name: String, description: String, moons: Int = 1){
           false
        }
   }
+}
+
+class Item(name: String, price: Double){
+
 
 }
