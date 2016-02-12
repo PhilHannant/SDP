@@ -16,3 +16,11 @@ Mostly Sunny
 3.3
 30.0[Error] expected:
 530
+Lemon Zinger[Error] expected:
+Lemon Zinger decaf
+Jasmine Green[Error] expected:
+Jasmine Green + sugar
+100[Error] expected:
+16
+Earl Grey[Error] expected:
+Earl Grey + milk + sugar
