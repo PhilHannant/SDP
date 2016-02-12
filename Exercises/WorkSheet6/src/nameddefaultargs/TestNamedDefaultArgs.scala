@@ -13,8 +13,25 @@ object TestNamedDefaultArgs extends App {
   val t2 = new SimpleTime2(hours=10)
   t2.hours is 10
   t2.minutes is 0
+
+  val p = new Planet(name = "Mercury",
+    description = "small and hot planet", moons = 0)
+  p.hasMoon is false
+
 }
 
 case class SimpleTime(hours: Int, minutes: Int){}
 
 case class SimpleTime2(hours: Int, minutes: Int = 0){}
+
+class Planet(name: String, description: String, moons: Int = 1){
+
+  def hasMoon():Boolean = {
+      if (moons > 0) {
+          true
+       } else {
+          false
+       }
+  }
+
+}
