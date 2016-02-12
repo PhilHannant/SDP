@@ -12,3 +12,7 @@ Unknown[Error] expected:
 Cloudy
 Mostly Cloudy[Error] expected:
 Mostly Sunny
+0.30000000000000004[Error] expected:
+3.3
+30.0[Error] expected:
+530
