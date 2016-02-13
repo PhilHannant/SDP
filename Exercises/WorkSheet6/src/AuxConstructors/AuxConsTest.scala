@@ -22,3 +22,8 @@ class ClothesWasher(val modelName: String, val capacity: Double){
   }
 
 }
+
+class ClothesWasher2(val modelName: String = "NotNone", val capacity: Double = 20){
+
+}
+
