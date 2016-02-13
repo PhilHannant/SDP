@@ -26,6 +26,19 @@ class Tea(val decaf: Boolean = false,
           val sugar: Boolean = false,
           val name: String = "Earl Grey",
           val milk: Boolean = false){
+  def extra():String = {
+    var extra:String = ""
+    if (decaf){
+        extra += " + decaf"
+    }
+    if (sugar){
+        extra += " + sugar"
+    }
+    if (milk){
+        extra += " + milk"
+    }
+    extra
+  }
 
   def describe(): String = {
     name
