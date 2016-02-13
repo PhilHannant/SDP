@@ -24,3 +24,23 @@ Jasmine Green + sugar
 16
 Earl Grey[Error] expected:
 Earl Grey + milk + sugar
+Lemon Zinger[Error] expected:
+Lemon Zinger decaf
+Jasmine Green[Error] expected:
+Jasmine Green + sugar
+100[Error] expected:
+16
+Earl Grey[Error] expected:
+Earl Grey + milk + sugar
+Lemon Zinger + decaf[Error] expected:
+Lemon Zinger decaf
+100[Error] expected:
+16
+Earl Grey + sugar + milk[Error] expected:
+Earl Grey + milk + sugar
+Lemon Zinger + decaf[Error] expected:
+Lemon Zinger decaf
+100[Error] expected:
+16
+100[Error] expected:
+16

@@ -29,28 +29,28 @@ class Tea(val decaf: Boolean = false,
   def extra():String = {
     var extra:String = ""
     if (decaf){
-        extra += " + decaf"
-    }
-    if (sugar){
-        extra += " + sugar"
+        extra += " decaf"
     }
     if (milk){
         extra += " + milk"
+    }
+    if (sugar){
+      extra += " + sugar"
     }
     extra
   }
 
   def describe(): String = {
-    name
+    name + extra()
   }
 
   def calories(): Int = {
     var totCal = 0
     if (sugar == true){
-      totCal = totCal + 100
+      totCal = totCal + 16
     }
     if (milk == true){
-      totCal = totCal + 16
+      totCal = totCal + 100
     }
     totCal
   }
