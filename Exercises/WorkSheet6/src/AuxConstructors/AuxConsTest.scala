@@ -7,4 +7,18 @@ object AuxConsTest {
 
 }
 
-class ClothesWasher()
+class ClothesWasher(val modelName: String, val capacity: Double){
+
+  def this() = {
+    this("", 0)
+  }
+
+  def this(modelName: String) = {
+    this(modelName, 0)
+  }
+  
+  def this(capacity: Double) = {
+    this("", capacity)
+  }
+
+}
