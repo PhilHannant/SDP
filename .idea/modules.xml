@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/CW1/CW1.iml" filepath="$PROJECT_DIR$/CW1/CW1.iml" />
       <module fileurl="file://$PROJECT_DIR$/SDP.iml" filepath="$PROJECT_DIR$/SDP.iml" />
       <module fileurl="file://$PROJECT_DIR$/Exercises/WorkSheet1/WorkSheet1.iml" filepath="$PROJECT_DIR$/Exercises/WorkSheet1/WorkSheet1.iml" />
       <module fileurl="file://$PROJECT_DIR$/Exercises/WorkSheet2/WorkSheet2.iml" filepath="$PROJECT_DIR$/Exercises/WorkSheet2/WorkSheet2.iml" />
