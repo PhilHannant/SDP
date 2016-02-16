@@ -29,6 +29,9 @@ public class DivInstructionTest {
 
     @Test
     public void testExecute() throws Exception {
+        divIns.execute(m);
+        assertEquals(9, m.getRegisters().getRegister(2));
 
+        }
     }
 }
