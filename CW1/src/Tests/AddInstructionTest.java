@@ -34,4 +34,9 @@ public class AddInstructionTest {
 
     }
 
+    @Test
+    public void toStringTest(){
+        assertEquals("f0: add 2 + 3 to 5", addIns.toString());
+    }
+
 }
