@@ -19,7 +19,7 @@ public class AddInstructionTest {
 
     @Before
     public void construct() {
-        Machine m = new Machine();
+        m = new Machine();
         addIns = new AddInstruction("f0", 5, 2, 3);
         m.setRegisters(new Registers());
         m.getRegisters().setRegister(3, 10);
@@ -30,6 +30,8 @@ public class AddInstructionTest {
     @Test
     public void testExecute(){
         addIns.execute(m);
+        assertEquals(34, m.getRegisters().getRegister(1));
+
     }
 
 }
