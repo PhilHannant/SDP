@@ -1,6 +1,7 @@
 package Tests;
 
 import org.junit.Before;
+import org.junit.Test;
 import sml.MulInstruction;
 import sml.Machine;
 import sml.Registers;
@@ -22,7 +23,15 @@ public class MulInstructionTest {
         mulIns = new MulInstruction("f0", 5, 2, 3);
         m.setRegisters(new Registers());
         m.getRegisters().setRegister(3, 10);
-        m.getRegisters().setRegister(1, 34);
+        m.getRegisters().setRegister(1, 12);
         m.getRegisters().setRegister(2, 9);
     }
+
+    @Test
+    public void testExecute(){
+        mulIns.execute(m);
+        assertEquals(10, m.getRegisters().getRegister(3));
+
+    }
+
 }
