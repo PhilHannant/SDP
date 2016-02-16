@@ -32,6 +32,5 @@ public class DivInstructionTest {
         divIns.execute(m);
         assertEquals(9, m.getRegisters().getRegister(2));
 
-        }
     }
 }
