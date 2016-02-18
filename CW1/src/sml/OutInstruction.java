@@ -22,6 +22,8 @@ public class OutInstruction extends Instruction {
 
     @Override
     public void execute(Machine m) {
+        System.out.println(m.getRegisters().getRegister(op1));
+
 
     }
 }
