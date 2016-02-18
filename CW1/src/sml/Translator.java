@@ -106,6 +106,7 @@ public class Translator {
             case "out":
                 r = scanInt();
                 s1 = scanInt();
+                System.out.println("s1 " + s1);
                 return new OutInstruction(label, s1);
             case "lin":
                 r = scanInt();
@@ -142,6 +143,7 @@ public class Translator {
     private int scanInt() {
         String word = scan();
         if (word.length() == 0) {
+            System.out.println("max! " + Integer.MAX_VALUE);
             return Integer.MAX_VALUE;
         }
 
