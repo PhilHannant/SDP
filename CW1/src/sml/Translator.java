@@ -92,17 +92,21 @@ public class Translator {
                 r = scanInt();
                 s1 = scanInt();
                 s2 = scanInt();
-                return new AddInstruction(label, r, s1, s2);
+                return new MinusInstruction(label, r, s1, s2);
             case "mul":
                 r = scanInt();
                 s1 = scanInt();
                 s2 = scanInt();
-                return new AddInstruction(label, r, s1, s2);
+                return new MulInstruction(label, r, s1, s2);
             case "div":
                 r = scanInt();
                 s1 = scanInt();
                 s2 = scanInt();
-                return new AddInstruction(label, r, s1, s2);
+                return new DivInstruction(label, r, s1, s2);
+            case "out":
+                r = scanInt();
+                s1 = scanInt();
+                return new OutInstruction(label, r, s1);
             case "lin":
                 r = scanInt();
                 s1 = scanInt();
