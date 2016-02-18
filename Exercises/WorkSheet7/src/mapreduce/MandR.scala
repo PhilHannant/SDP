@@ -23,5 +23,12 @@ object MandR extends App {
   val v3 = for (e <- v) yield e +1
   v3 is Vector(2, 3, 4, 5)
 
+  val v4 = Vector(1, 10, 100, 1000)
+  v4.reduce((sum, n) => sum + n) is 1111
+
+  var sum = 0
+  v4.foreach(x => sum += x)
+  sum is 1111
+
 
 }

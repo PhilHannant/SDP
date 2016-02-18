@@ -62,3 +62,9 @@ Vector(21, 32, 43, 54)
 21
 54[Error] expected:
 21
+Vector((), (), (), ())[Error] expected:
+1111
+Vector(1, 10, 100, 1000)[Error] expected:
+1111
+Vector(1, 10, 100, 1000)[Error] expected:
+1111
