@@ -7,7 +7,7 @@ import sml.Machine;
 import sml.OutInstruction;
 import sml.Registers;
 
-
+import static org.junit.Assert.assertEquals;
 
 
 /**
@@ -29,7 +29,8 @@ public class OutInstructionTest {
     }
 
     @Test
-    public void testExecute() throws Exception {
-
+    public void testExecute() {
+        outIns.execute(m);
+        assertEquals(34, m.getRegisters().getRegister(1));
     }
 }
