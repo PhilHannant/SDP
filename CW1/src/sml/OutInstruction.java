@@ -5,23 +5,23 @@ package sml;
  */
 public class OutInstruction extends Instruction {
 
-    private int result;
+    private int register;
     private int op1;
-    private int op2;
+
 
     public OutInstruction(String l, String op) {
         super(l, op);
     }
 
-    public OutInstruction(String label, int result, int op1){
+    public OutInstruction(String label, int register){
         super(label, "out");
-        this.result = result;
-        this.op1 = op1;
+        this.register =register;
+        System.out.println("register: " + register);
     }
 
     @Override
     public void execute(Machine m) {
-        System.out.println(m.getRegisters().getRegister(op1));
+        System.out.println(m.getRegisters().getRegister(register));
 
 
     }

@@ -106,7 +106,7 @@ public class Translator {
             case "out":
                 r = scanInt();
                 s1 = scanInt();
-                return new OutInstruction(label, r, s1);
+                return new OutInstruction(label, s1);
             case "lin":
                 r = scanInt();
                 s1 = scanInt();

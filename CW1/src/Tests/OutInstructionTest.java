@@ -21,7 +21,7 @@ public class OutInstructionTest {
     @Before
     public void setUp(){
         m = new Machine();
-        outIns = new OutInstruction("f0", 5, 2);
+        outIns = new OutInstruction("f0", 2);
         m.setRegisters(new Registers());
         m.getRegisters().setRegister(3, 10);
         m.getRegisters().setRegister(1, 34);
