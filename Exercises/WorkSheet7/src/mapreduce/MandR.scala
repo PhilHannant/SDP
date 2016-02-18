@@ -30,5 +30,10 @@ object MandR extends App {
   v4.foreach(x => sum += x)
   sum is 1111
 
+  def sumIt(x: Int*) = {
+    x.reduce((sum, x) => sum + x)
+  }
 
+  sumIt(1, 2, 3) is 6
+  sumIt(45, 45, 45, 60) is 195
 }
