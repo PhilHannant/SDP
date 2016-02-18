@@ -44,3 +44,7 @@ Lemon Zinger decaf
 16
 100[Error] expected:
 16
+Vector(21, 31, 41, 51)[Error] expected:
+Vector(2, 3, 4, 5)
+Vector(21, 31, 41, 51)[Error] expected:
+Vector(21, 32, 43, 54)
