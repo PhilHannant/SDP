@@ -33,14 +33,11 @@ public class Machine {
     }
 
     public static void main(String[] args) {
+        String filename = "/Users/philhannant/IdeaProjects/SDP/CW1/src/test1.sml";
 
-        if (args.length != 1) {
-            System.err.println("Incorrect number of arguments - Machine <file> - required");
-            System.exit(-1);
-        }
 
         Machine m = new Machine();
-        Translator t = new Translator(args[0]);
+        Translator t = new Translator(filename);
         t.readAndTranslate(m.getLabels(), m.getProg());
 
         System.out.println("Here is the program; it has " + m.getProg().size() + " instructions.");
