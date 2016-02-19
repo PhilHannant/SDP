@@ -15,7 +15,7 @@ class Circle(radius: Double) extends Shape{
 
 class Rectangle(length: Double, height: Double) extends Shape{
 
-  def sides: Int = 1
+  def sides: Int = 4
   def perimeter: Double =
     (2*length) + (2*height)
   def area: Double =
@@ -24,7 +24,27 @@ class Rectangle(length: Double, height: Double) extends Shape{
 
 class Square(side: Double) extends Shape{
 
-  def sides: Int = 1
+  def sides: Int = 4
+  def perimeter: Double =
+    (4*side)
+  def area: Double =
+    side * side
+}
+
+abstract class Rectangular extends Shape {
+  def sides: Int = 4
+}
+
+class Rectangle2(length: Double, height: Double) extends Rectangular{
+
+  def perimeter: Double =
+    (2*length) + (2*height)
+  def area: Double =
+    length * height
+}
+
+class Square2(side: Double) extends Rectangular{
+
   def perimeter: Double =
     (4*side)
   def area: Double =
