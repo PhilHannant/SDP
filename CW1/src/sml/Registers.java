@@ -29,8 +29,6 @@ public class Registers {
     // Precondition: 0 <= i <= NUMBEROFREGISTERS
 
     public void setRegister(int i, int v) {
-        System.out.println("I: " + i);
-        System.out.println("V: " + v);
         registers[i] = v;
     }
 
