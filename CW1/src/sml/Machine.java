@@ -33,7 +33,7 @@ public class Machine {
     }
 
     public static void main(String[] args) {
-        String filename = "/Users/philhannant/IdeaProjects/SDP/CW1/src/testMul.sml";
+        String filename = "/Users/philhannant/IdeaProjects/SDP/CW1/src/testDiv.sml";
 
 
         Machine m = new Machine();
