@@ -105,7 +105,6 @@ public class Translator {
                 return new DivInstruction(label, r, s1, s2);
             case "out":
                 s1 = scanInt();
-                System.out.println("s1 " + s1);
                 return new OutInstruction(label, s1);
             case "lin":
                 r = scanInt();
