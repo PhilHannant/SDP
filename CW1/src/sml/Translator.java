@@ -74,7 +74,23 @@ public class Translator {
     // removed. Translate line into an instruction with label label
     // and return the instruction
     public Instruction getInstruction(String label) {
-        int s1; // Possible operands of the instruction
+
+        if (line.equals(""))
+            return null;
+
+        String ins = scan() + "Instruction";
+
+        try {
+            Class<?> insClass = Class.forName(ins);
+            System.out.println(insClass.getClass());
+
+
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
+
+        /*int s1; // Possible operands of the instruction
         int s2;
         int r;
         int x;
@@ -117,7 +133,7 @@ public class Translator {
                 l2 = scan();
                 return new BnzInstruction(label, s1, l2);
 
-        }
+        }*/
 
         // You will have to write code here for the other instructions.
 
