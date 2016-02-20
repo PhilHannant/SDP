@@ -50,6 +50,7 @@ public class Translator {
                 if (label.length() > 0) {
                     Instruction ins = getInstruction(label);
                     if (ins != null) {
+                        System.out.println();
                         labels.addLabel(label);
                         program.add(ins);
                     }
@@ -111,7 +112,7 @@ public class Translator {
                 r = scanInt();
                 s1 = scanInt();
                 return new LinInstruction(label, r, s1);
-            case "bnz:":
+            case "bnz":
                 s1 = scanInt();
                 l2 = scan();
                 return new BnzInstruction(label, s1, l2);
