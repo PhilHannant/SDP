@@ -104,7 +104,6 @@ public class Translator {
                 s2 = scanInt();
                 return new DivInstruction(label, r, s1, s2);
             case "out":
-                r = scanInt();
                 s1 = scanInt();
                 System.out.println("s1 " + s1);
                 return new OutInstruction(label, s1);
