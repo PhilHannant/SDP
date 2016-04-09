@@ -5,7 +5,9 @@ import org.junit.Test;
 import org.junit.experimental.categories.IncludeCategories;
 import sml.*;
 
+import java.lang.reflect.Constructor;
 import java.util.ArrayList;
+import java.util.concurrent.ExecutionException;
 
 import static org.junit.Assert.*;
 
@@ -32,10 +34,18 @@ public class TranslatorTest {
 
 
     @Test
-    public void testGetClassName() throws Exception {
+    public void testGetClassName() {
         String inOut = t.getClassName("lin");
         LinInstruction li = new LinInstruction("f0", "lin");
         String liString = li.getClass().getName();
         assertEquals(liString, inOut);
     }
+
+    @Test
+    public void testGetConstructorsAddTest(){
+        String outCons = t.getCons("add").toString();
+        String expectedCons = "public sml.AddInstruction(java.lang.String,int,int,int)";
+        assertEquals(expectedCons, outCons);
+    }
+
 }
