@@ -21,6 +21,9 @@ public class TranslatorTest {
     private Labels labels;
     private ArrayList<Instruction> prog;
 
+    /**
+     * Set up.
+     */
     @Before
     public void setUp(){
         m = new Machine();
@@ -33,6 +36,9 @@ public class TranslatorTest {
     }
 
 
+    /**
+     * Test get class name.
+     */
     @Test
     public void testGetClassName() {
         String inOut = t.getClassName("lin");
@@ -41,6 +47,9 @@ public class TranslatorTest {
         assertEquals(liString, inOut);
     }
 
+    /**
+     * Test get constructors add test.
+     */
     @Test
     public void testGetConstructorsAddTest(){
         String outCons = t.getCons("add").toString();
@@ -48,6 +57,9 @@ public class TranslatorTest {
         assertEquals(expectedCons, outCons);
     }
 
+    /**
+     * Test get constructors bnz test.
+     */
     @Test
     public void testGetConstructorsBnzTest(){
         String outCons = t.getCons("bnz").toString();
@@ -55,6 +67,9 @@ public class TranslatorTest {
         assertEquals(expectedCons, outCons);
     }
 
+    /**
+     * Test get constructors div test.
+     */
     @Test
     public void testGetConstructorsDivTest(){
         String outCons = t.getCons("div").toString();
@@ -63,6 +78,9 @@ public class TranslatorTest {
     }
 
 
+    /**
+     * Test get constructors lin test.
+     */
     @Test
     public void testGetConstructorsLinTest(){
         String outCons = t.getCons("lin").toString();
@@ -70,6 +88,9 @@ public class TranslatorTest {
         assertEquals(expectedCons, outCons);
     }
 
+    /**
+     * Test get constructors sub test.
+     */
     @Test
     public void testGetConstructorsSubTest(){
         String outCons = t.getCons("sub").toString();
@@ -77,6 +98,9 @@ public class TranslatorTest {
         assertEquals(expectedCons, outCons);
     }
 
+    /**
+     * Test get constructors mul test.
+     */
     @Test
     public void testGetConstructorsMulTest(){
         String outCons = t.getCons("mul").toString();

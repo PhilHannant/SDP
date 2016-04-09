@@ -5,6 +5,9 @@ import java.util.ArrayList;
 //An instance contains a list of Strings, called "labels",
 //in the order in which they were added to the list.
 
+/**
+ * The type Labels.
+ */
 public class Labels {
 
     private ArrayList<String> labels;
@@ -17,6 +20,12 @@ public class Labels {
     // (the first one added is number 0)
     // Precondition: the list has at most 49 entries
 
+    /**
+     * Add label int.
+     *
+     * @param lab the lab
+     * @return the int
+     */
     public int addLabel(String lab) {
         labels.add(lab);
         return labels.size() - 1;
@@ -25,6 +34,12 @@ public class Labels {
     // = the number of label lab in the list
     // (= -1 if lab is not in the list)
 
+    /**
+     * Index of int.
+     *
+     * @param lab the lab
+     * @return the int
+     */
     public int indexOf(String lab) {
 
         // invariant: lab is not in labels[0..i-1]
@@ -56,6 +71,9 @@ public class Labels {
 
     // Set the number of elements in the list to 0
 
+    /**
+     * Reset.
+     */
     public void reset() {
         labels.clear();
     }

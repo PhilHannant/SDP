@@ -17,6 +17,9 @@ public class SubInstructionTest {
     private SubInstruction minIns;
     private Machine m;
 
+    /**
+     * Construct.
+     */
     @Before
     public void construct() {
         m = new Machine();
@@ -27,6 +30,9 @@ public class SubInstructionTest {
         m.getRegisters().setRegister(2, 9);
     }
 
+    /**
+     * Test execute.
+     */
     @Test
     public void testExecute(){
         minIns.execute(m);

@@ -10,10 +10,24 @@ public class MulInstruction extends Instruction {
     private int op2;
 
 
+    /**
+     * Instantiates a new Mul instruction.
+     *
+     * @param l  the l
+     * @param op the op
+     */
     public MulInstruction(String l, String op) {
         super(l, op);
     }
 
+    /**
+     * Instantiates a new Mul instruction.
+     *
+     * @param label  the label
+     * @param result the result
+     * @param op1    the op 1
+     * @param op2    the op 2
+     */
     public MulInstruction(String label, int result, int op1, int op2){
         super(label, "mul");
         this.result = result;
@@ -21,6 +35,10 @@ public class MulInstruction extends Instruction {
         this.op2 = op2;
     }
 
+    /**
+     * Mul execute method
+     * @param m
+     */
     @Override
     public void execute(Machine m) {
         int value1 = m.getRegisters().getRegister(op1);
@@ -28,6 +46,10 @@ public class MulInstruction extends Instruction {
         m.getRegisters().setRegister(result, value1 * value2);
     }
 
+    /**
+     * Generated toString method
+     * @return
+     */
     @Override
     public String toString(){
         return super.toString() + " " + op1 + " * " + op2 + " to " + result;

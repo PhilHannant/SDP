@@ -9,6 +9,9 @@ import java.util.ArrayList;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 
+/**
+ * The type Translator.
+ */
 /*
  * The translator of a <b>S</b><b>M</b>al<b>L</b> program.
  */
@@ -23,11 +26,23 @@ public class Translator {
     private ArrayList<Instruction> program; // The program to be created
     private String fileName; // source file of SML code
 
+    /**
+     * Instantiates a new Translator.
+     *
+     * @param fileName the file name
+     */
     public Translator(String fileName) {
         this.fileName = PATH + fileName;
     }
 
-    // translate the small program in the file into lab (the labels) and
+    /**
+     * Read and translate boolean.
+     *
+     * @param lab  the lab
+     * @param prog the prog
+     * @return the boolean
+     */
+// translate the small program in the file into lab (the labels) and
     // prog (the program)
     // return "no errors were detected"
     public boolean readAndTranslate(Labels lab, ArrayList<Instruction> prog) {
@@ -73,11 +88,16 @@ public class Translator {
         return true;
     }
 
-    // line should consist of an MML instruction, with its label already
+    /**
+     * Gets instruction.
+     *
+     * @param label the label
+     * @return the instruction
+     */
+// line should consist of an MML instruction, with its label already
     // removed. Translate line into an instruction with label label
     // and return the instruction
     public Instruction getInstruction(String label) {
-        System.out.println(line);
         if (line.equals(""))
             return null;
         //Reflection added below
@@ -190,12 +210,24 @@ public class Translator {
         }
     }
 
+    /**
+     * Get class name string.
+     *
+     * @param ins the ins
+     * @return the string
+     */
     //Returns string representing the class to be instantiated
     public String getClassName(String ins){//Made public so it's possible to test
         String returnIns = "sml." + ins.toUpperCase().charAt(0) + ins.substring(1) + "Instruction";
         return returnIns;
     }
 
+    /**
+     * Get cons constructor.
+     *
+     * @param ins the ins
+     * @return the constructor
+     */
     //returns the contructors, assumes it will always be the 2nd constructor.
     public Constructor<?> getCons(String ins){
         try {

@@ -18,6 +18,9 @@ public class OutInstructionTest {
     private Machine m;
     private OutInstruction outIns;
 
+    /**
+     * Set up.
+     */
     @Before
     public void setUp(){
         m = new Machine();
@@ -28,6 +31,9 @@ public class OutInstructionTest {
         m.getRegisters().setRegister(2, 9);
     }
 
+    /**
+     * Test execute.
+     */
     @Test
     public void testExecute() {
         outIns.execute(m);

@@ -17,6 +17,9 @@ public class AddInstructionTest {
     private AddInstruction addIns;
     private Machine m;
 
+    /**
+     * Construct.
+     */
     @Before
     public void construct() {
         m = new Machine();
@@ -27,6 +30,9 @@ public class AddInstructionTest {
         m.getRegisters().setRegister(2, 9);
     }
 
+    /**
+     * Test execute.
+     */
     @Test
     public void testExecute(){
         addIns.execute(m);
@@ -34,6 +40,9 @@ public class AddInstructionTest {
 
     }
 
+    /**
+     * To string test.
+     */
     @Test
     public void toStringTest(){
         assertEquals("f0: add 2 + 3 to 5", addIns.toString());

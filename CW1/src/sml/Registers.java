@@ -7,7 +7,6 @@ package sml;
  *
  * @author someone
  */
-
 public class Registers {
 
     private final static int NUMBEROFREGISTERS = 32;
@@ -19,6 +18,9 @@ public class Registers {
         registers = new int[NUMBEROFREGISTERS];
     }
 
+    /**
+     * Instantiates a new Registers.
+     */
     public Registers() {
         for (int i = 0; i != registers.length; i++) {
             registers[i] = 0;
@@ -28,18 +30,40 @@ public class Registers {
     // Set register i to v.
     // Precondition: 0 <= i <= NUMBEROFREGISTERS
 
+    /**
+     * Sets register.
+     *
+     * @param i the
+     * @param v the v
+     */
     public void setRegister(int i, int v) {
         registers[i] = v;
     }
 
+    /**
+     * Gets register.
+     *
+     * @param i the
+     * @return the register
+     */
     public int getRegister(int i) {
         return registers[i];
     }
 
+    /**
+     * Get registers int [ ].
+     *
+     * @return the int [ ]
+     */
     public int[] getRegisters() {
         return this.registers;
     }
 
+    /**
+     * Sets registers.
+     *
+     * @param registers the registers
+     */
     public void setRegisters(int[] registers) {
         this.registers = registers;
     }
@@ -62,6 +86,12 @@ public class Registers {
         return result;
     }
 
+    /**
+     * Can equal boolean.
+     *
+     * @param other the other
+     * @return the boolean
+     */
     protected boolean canEqual(Object other) {
         return other instanceof Registers;
     }

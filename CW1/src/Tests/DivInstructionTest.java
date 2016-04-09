@@ -17,6 +17,9 @@ public class DivInstructionTest {
     private DivInstruction divIns;
     private Machine m;
 
+    /**
+     * Construct.
+     */
     @Before
     public void construct() {
         m = new Machine();
@@ -27,6 +30,11 @@ public class DivInstructionTest {
         m.getRegisters().setRegister(2, 9);
     }
 
+    /**
+     * Test execute.
+     *
+     * @throws Exception the exception
+     */
     @Test
     public void testExecute() throws Exception {
         divIns.execute(m);

@@ -9,10 +9,22 @@ public class OutInstruction extends Instruction {
     private int op1;
 
 
+    /**
+     * Instantiates a new Out instruction.
+     *
+     * @param l  the l
+     * @param op the op
+     */
     public OutInstruction(String l, String op) {
         super(l, op);
     }
 
+    /**
+     * Instantiates a new Out instruction.
+     *
+     * @param label    the label
+     * @param register the register
+     */
     public OutInstruction(String label, int register){
         super(label, "out");
         this.register =register;
@@ -20,7 +32,7 @@ public class OutInstruction extends Instruction {
 
     @Override
     public void execute(Machine m) {
-        System.out.println(m.getRegisters().getRegister(register));
+        System.out.println("Out = " + m.getRegisters().getRegister(register));
 
     }
 
