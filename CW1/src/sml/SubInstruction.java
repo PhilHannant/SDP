@@ -3,17 +3,17 @@ package sml;
 /**
  * Created by philhannant on 16/02/2016.
  */
-public class MinusInstruction extends Instruction {
+public class SubInstruction extends Instruction {
 
     private int result;
     private int op1;
     private int op2;
 
-    public MinusInstruction(String l, String op) {
+    public SubInstruction(String l, String op) {
         super(l, op);
     }
 
-    public MinusInstruction(String label, int result, int op1, int op2){
+    public SubInstruction(String label, int result, int op1, int op2){
         super(label, "sub");
         this.result = result;
         this.op1 = op1;

@@ -4,23 +4,23 @@ import org.junit.Before;
 import org.junit.Test;
 
 import sml.Machine;
-import sml.MinusInstruction;
 import sml.Registers;
+import sml.SubInstruction;
 
 import static org.junit.Assert.*;
 
 /**
  * Created by philhannant on 16/02/2016.
  */
-public class MinusInstructionTest {
+public class SubInstructionTest {
 
-    private MinusInstruction minIns;
+    private SubInstruction minIns;
     private Machine m;
 
     @Before
     public void construct() {
         m = new Machine();
-        minIns = new MinusInstruction("f0", 5, 2, 3);
+        minIns = new SubInstruction("f0", 5, 2, 3);
         m.setRegisters(new Registers());
         m.getRegisters().setRegister(3, 10);
         m.getRegisters().setRegister(1, 34);

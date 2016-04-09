@@ -69,4 +69,11 @@ public class TranslatorTest {
         String expectedCons = "public sml.LinInstruction(java.lang.String,int,int)";
         assertEquals(expectedCons, outCons);
     }
+
+    @Test
+    public void testGetConstructorsMinusTest(){
+        String outCons = t.getCons("sub").toString();
+        String expectedCons = "public sml.SubInstruction(java.lang.String,int,int,int)";
+        assertEquals(expectedCons, outCons);
+    }
 }

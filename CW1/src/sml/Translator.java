@@ -130,7 +130,7 @@ public class Translator {
                 r = scanInt();
                 s1 = scanInt();
                 s2 = scanInt();
-                return new MinusInstruction(label, r, s1, s2);
+                return new SubInstruction(label, r, s1, s2);
             case "mul":
                 r = scanInt();
                 s1 = scanInt();
