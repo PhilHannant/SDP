@@ -77,10 +77,10 @@ public class Translator {
     // removed. Translate line into an instruction with label label
     // and return the instruction
     public Instruction getInstruction(String label) {
-    System.out.println("translating " + label);
+        System.out.println(line);
         if (line.equals(""))
             return null;
-
+        //Reflection added below
         String ins = scan();
         try {
             Constructor<?> cons = getCons(ins);
@@ -88,25 +88,14 @@ public class Translator {
             Object[] paras = new Object[paraTypes.length];
 
             paras[0] = label;
-            for(int i = 1; i < paraTypes.length; i++){
-                System.out.println(paraTypes[i].toString());
-                if(paraTypes[i].toString().equals("int")){
+            for(int i = 1; i < paraTypes.length; i++) {
+                if (paraTypes[i].toString().equals("int")) {
                     paras[i] = scanInt();
                 } else {
                     paras[i] = scan();
                 }
 
             }
-////            System.out.println(paras[1].toString());
-//
-//            paras[1] = scanInt();
-//
-//            paras[2] = scanInt();
-//            System.out.println(paras[0]);
-//            System.out.println(paras[1]);
-//            System.out.println(paras[2]);
-//            System.out.println(cons.toString());
-//            System.out.println(cons.newInstance(paras).toString());
 
             return (Instruction)cons.newInstance(paras);
         } catch (InstantiationException e) {
@@ -200,12 +189,14 @@ public class Translator {
             return Integer.MAX_VALUE;
         }
     }
-    //Made public so it's possible to test
-    public String getClassName(String ins){
+
+    //Returns string representing the class to be instantiated
+    public String getClassName(String ins){//Made public so it's possible to test
         String returnIns = "sml." + ins.toUpperCase().charAt(0) + ins.substring(1) + "Instruction";
         return returnIns;
     }
 
+    //returns the contructors, assumes it will always be the 2nd constructor.
     public Constructor<?> getCons(String ins){
         try {
             Constructor<?>[] publicConstructors = Class.forName(getClassName(ins)).getConstructors();
