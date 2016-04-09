@@ -77,14 +77,14 @@ public class Translator {
     // removed. Translate line into an instruction with label label
     // and return the instruction
     public Instruction getInstruction(String label) {
-
+    System.out.println("translating " + label);
         if (line.equals(""))
             return null;
 
         String ins = scan();
 //        String str = getClass(ins);
         try {
-            Class insClass = Class.forName(getClassName(ins));
+//            Class insClass = Class.forName(getClassName(ins));
             Constructor<?>[] publicConstructors = Class.forName(getClassName(ins)).getConstructors();
             Constructor<?> cons = publicConstructors[1];
 
@@ -92,14 +92,12 @@ public class Translator {
             Object[] paras = new Object[paraTypes.length];
 
             paras[0] = label;
-            System.out.println(paras[1].toString());
+//            System.out.println(paras[1].toString());
 
             paras[1] = scanInt();
 
             paras[2] = scanInt();
 
-            Object obj = cons.newInstance(paras);
-            System.out.println(obj.getClass().toString());
             return (Instruction)cons.newInstance(paras);
 
         } catch (ClassNotFoundException e) {
