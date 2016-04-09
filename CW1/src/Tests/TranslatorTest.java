@@ -71,9 +71,17 @@ public class TranslatorTest {
     }
 
     @Test
-    public void testGetConstructorsMinusTest(){
+    public void testGetConstructorsSubTest(){
         String outCons = t.getCons("sub").toString();
         String expectedCons = "public sml.SubInstruction(java.lang.String,int,int,int)";
         assertEquals(expectedCons, outCons);
     }
+
+    @Test
+    public void testGetConstructorsMulTest(){
+        String outCons = t.getCons("mul").toString();
+        String expectedCons = "public sml.MulInstruction(java.lang.String,int,int,int)";
+        assertEquals(expectedCons, outCons);
+    }
+
 }
