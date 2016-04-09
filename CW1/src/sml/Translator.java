@@ -2,6 +2,7 @@ package sml;
 
 import java.io.File;
 import java.io.IOException;
+import java.lang.reflect.Constructor;
 import java.util.ArrayList;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
@@ -78,17 +79,21 @@ public class Translator {
         if (line.equals(""))
             return null;
 
-        String ins = scan() + "Instruction";
-
+        String ins = scan();
+//        String str = getClass(ins);
         try {
-            Class<?> insClass = Class.forName(ins);
-            System.out.println(insClass.getClass());
+            Class insClass = Class.forName(getClassName(ins));
+            Constructor<?>[] publicConstructors = Class.forName(getClassName(ins)).getConstructors();
+            for (Constructor cons : publicConstructors) {
 
 
+                System.out.println(cons.getParameterCount());
+                System.out.println("Constructors: " + publicConstructors[1]);
+                System.out.println("Methods: " + insClass.getMethods().toString());
+            }
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
-
 
         /*int s1; // Possible operands of the instruction
         int s2;
@@ -173,4 +178,11 @@ public class Translator {
             return Integer.MAX_VALUE;
         }
     }
+
+    private String getClassName(String ins){
+        String returnIns = "sml." + ins.toUpperCase().charAt(0) + ins.substring(1) + "Instruction";
+        return returnIns;
+    }
+
+
 }
