@@ -84,22 +84,29 @@ public class Translator {
         String ins = scan();
         try {
             Constructor<?> cons = getCons(ins);
-
-
             Class[] paraTypes = cons.getParameterTypes();
             Object[] paras = new Object[paraTypes.length];
 
             paras[0] = label;
-//            System.out.println(paras[1].toString());
+            for(int i = 1; i < paraTypes.length; i++){
+                System.out.println(paraTypes[i].toString());
+                if(paraTypes[i].toString().equals("int")){
+                    paras[i] = scanInt();
+                } else {
+                    paras[i] = scan();
+                }
 
-            paras[1] = scanInt();
-
-            paras[2] = scanInt();
-            System.out.println(paras[0]);
-            System.out.println(paras[1]);
-            System.out.println(paras[2]);
-            System.out.println(cons.toString());
-            System.out.println(cons.newInstance(paras).toString());
+            }
+////            System.out.println(paras[1].toString());
+//
+//            paras[1] = scanInt();
+//
+//            paras[2] = scanInt();
+//            System.out.println(paras[0]);
+//            System.out.println(paras[1]);
+//            System.out.println(paras[2]);
+//            System.out.println(cons.toString());
+//            System.out.println(cons.newInstance(paras).toString());
 
             return (Instruction)cons.newInstance(paras);
         } catch (InstantiationException e) {
