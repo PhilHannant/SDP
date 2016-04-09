@@ -82,11 +82,9 @@ public class Translator {
             return null;
 
         String ins = scan();
-//        String str = getClass(ins);
         try {
-//            Class insClass = Class.forName(getClassName(ins));
-            Constructor<?>[] publicConstructors = Class.forName(getClassName(ins)).getConstructors();
-            Constructor<?> cons = publicConstructors[1];
+            Constructor<?> cons = getCons(ins);
+
 
             Class[] paraTypes = cons.getParameterTypes();
             Object[] paras = new Object[paraTypes.length];
@@ -97,11 +95,13 @@ public class Translator {
             paras[1] = scanInt();
 
             paras[2] = scanInt();
+            System.out.println(paras[0]);
+            System.out.println(paras[1]);
+            System.out.println(paras[2]);
+            System.out.println(cons.toString());
+            System.out.println(cons.newInstance(paras).toString());
 
             return (Instruction)cons.newInstance(paras);
-
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
         } catch (InstantiationException e) {
             e.printStackTrace();
         } catch (IllegalAccessException e) {
@@ -193,10 +193,20 @@ public class Translator {
             return Integer.MAX_VALUE;
         }
     }
-
-    private String getClassName(String ins){
+    //Made public so it's possible to test
+    public String getClassName(String ins){
         String returnIns = "sml." + ins.toUpperCase().charAt(0) + ins.substring(1) + "Instruction";
         return returnIns;
+    }
+
+    public Constructor<?> getCons(String ins){
+        try {
+            Constructor<?>[] publicConstructors = Class.forName(getClassName(ins)).getConstructors();
+            return publicConstructors[1];
+        } catch (ClassNotFoundException e){
+            e.printStackTrace();
+        }
+        return null;
     }
 
 }
