@@ -55,4 +55,10 @@ public class TranslatorTest {
         assertEquals(expectedCons, outCons);
     }
 
+    @Test
+    public void testGetConstructorsDivTest(){
+        String outCons = t.getCons("div").toString();
+        String expectedCons = "public sml.DivInstruction(java.lang.String,int,int,int)";
+        assertEquals(expectedCons, outCons);
+    }
 }
