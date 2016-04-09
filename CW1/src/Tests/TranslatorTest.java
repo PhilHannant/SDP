@@ -48,4 +48,11 @@ public class TranslatorTest {
         assertEquals(expectedCons, outCons);
     }
 
+    @Test
+    public void testGetConstructorsBnzTest(){
+        String outCons = t.getCons("bnz").toString();
+        String expectedCons = "public sml.BnzInstruction(java.lang.String,int,java.lang.String)";
+        assertEquals(expectedCons, outCons);
+    }
+
 }
