@@ -32,15 +32,10 @@ public class TranslatorTest {
 
 
     @Test
-    public void testGetInstruction() throws Exception {
-//        Instruction inOut = t.getInstruction("f0");
-        System.out.println(t.getInstruction("f0"));
-
+    public void testGetClassName() throws Exception {
+        String inOut = t.getClassName("lin");
         LinInstruction li = new LinInstruction("f0", "lin");
-        System.out.println(li.getClass());
-        Instruction outIns = new OutInstruction("f0", "lin");
-//        System.out.println(inOut.getClass());
-//        System.out.println(outIns.getClass());
-//        assertEquals(outIns.getClass(), inOut.getClass());
+        String liString = li.getClass().getName();
+        assertEquals(liString, inOut);
     }
 }
