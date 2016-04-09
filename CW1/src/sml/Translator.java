@@ -3,6 +3,8 @@ package sml;
 import java.io.File;
 import java.io.IOException;
 import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Parameter;
 import java.util.ArrayList;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
@@ -84,14 +86,29 @@ public class Translator {
         try {
             Class insClass = Class.forName(getClassName(ins));
             Constructor<?>[] publicConstructors = Class.forName(getClassName(ins)).getConstructors();
-            for (Constructor cons : publicConstructors) {
+            Constructor<?> cons = publicConstructors[1];
 
+            Class[] paraTypes = cons.getParameterTypes();
+            Object[] paras = new Object[paraTypes.length];
 
-                System.out.println(cons.getParameterCount());
-                System.out.println("Constructors: " + publicConstructors[1]);
-                System.out.println("Methods: " + insClass.getMethods().toString());
-            }
+            paras[0] = label;
+            System.out.println(paras[1].toString());
+
+            paras[1] = scanInt();
+
+            paras[2] = scanInt();
+
+            Object obj = cons.newInstance(paras);
+            System.out.println(obj.getClass().toString());
+            return (Instruction)cons.newInstance(paras);
+
         } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (InstantiationException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (InvocationTargetException e) {
             e.printStackTrace();
         }
 
@@ -183,6 +200,5 @@ public class Translator {
         String returnIns = "sml." + ins.toUpperCase().charAt(0) + ins.substring(1) + "Instruction";
         return returnIns;
     }
-
 
 }
