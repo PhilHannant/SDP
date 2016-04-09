@@ -25,4 +25,9 @@ public class BnzInstruction extends Instruction {
         }
 
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + " " + l2 +  " to " + register;
+    }
 }

@@ -16,14 +16,16 @@ public class OutInstruction extends Instruction {
     public OutInstruction(String label, int register){
         super(label, "out");
         this.register =register;
-        System.out.println("register: " + register);
     }
 
     @Override
     public void execute(Machine m) {
-        System.out.println(m.getRegisters().toString());
-        //(m.getRegisters().getRegister(register));
+        System.out.println(m.getRegisters().getRegister(register));
 
+    }
 
+    @Override
+    public String toString(){
+        return super.toString() + " to " + register;
     }
 }
