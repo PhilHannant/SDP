@@ -8,6 +8,7 @@ import atomic.AtomicTest._
   */
 object MandR extends App {
 
+
   val v1 = Vector(1, 2, 3, 4)
   v1.map(n => n + 1) is Vector(2, 3, 4, 5)
 
